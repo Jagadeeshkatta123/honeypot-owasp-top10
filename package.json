@@ -1,5 +1,5 @@
 {
-    "dependencies": {
-        "express": "2.5.8" // Vulnerable version with known RCE issues
-    }
+  "dependencies": {
+    "express": "2.5.8"
+  }
 }
