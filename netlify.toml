@@ -1,20 +1,12 @@
-# netlify.toml
-
 [build]
-  # The publish directory, where Netlify will find the static files to serve
-  publish = "public"
+  publish = "public"    # This is the folder to deploy (change if needed)
+  command = ""          # Leave blank if no build command is needed (for static sites)
 
-  # The command that Netlify uses to build the site (if applicable)
-  # For a static site without a build process, this can be left empty
-  command = ""
+[build.environment]
+  NODE_VERSION = "16"   # If using Node.js or any server-side functions (optional)
 
 [[redirects]]
-  # Redirect all requests to the corresponding function
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
+  from = "/"
+  to = "/index.html"
   status = 200
   force = true
-
-[functions]
-  # Directory where your serverless functions are stored
-  directory = "functions"
