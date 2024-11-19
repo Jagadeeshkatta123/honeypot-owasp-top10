@@ -1,111 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OWASP Top 10 - 2021</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    main {
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      background: #fff;
-      margin: 1rem 0;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    li a {
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
-    li a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #333;
-      color: #fff;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Top 10 - 2021 Vulnerabilities</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>OWASP Top 10 - 2021</h1>
-    <p>Learn about the most critical security risks to web applications</p>
-  </header>
-
-  <main>
+    <h1>OWASP Top 10 - 2021 Vulnerabilities</h1>
+    <p>Explore and learn about the most critical security risks in web applications.</p>
     <ul>
-      <li>
-        <a href="/broken_access_control.html">1. Broken Access Control</a>
-        <p>Exploits improper access restrictions, allowing unauthorized access to sensitive resources.</p>
-      </li>
-      <li>
-        <a href="/cryptographic_failures.html">2. Cryptographic Failures</a>
-        <p>Focuses on weaknesses in protecting sensitive data, like insecure storage or transmission.</p>
-      </li>
-      <li>
-        <a href="/injection.html">3. Injection</a>
-        <p>Occurs when untrusted input is processed as a command or query, such as SQL Injection.</p>
-      </li>
-      <li>
-        <a href="/insecure_design.html">4. Insecure Design</a>
-        <p>Highlights flaws in the design phase that lead to exploitable vulnerabilities.</p>
-      </li>
-      <li>
-        <a href="/security_misconfiguration.html">5. Security Misconfiguration</a>
-        <p>Results from insecure default configurations, unnecessary files, or unprotected endpoints.</p>
-      </li>
-      <li>
-        <a href="/vulnerable_and_outdated_components.html">6. Vulnerable and Outdated Components</a>
-        <p>Using outdated libraries or components with known vulnerabilities.</p>
-      </li>
-      <li>
-        <a href="/identification_and_authentication_failures.html">7. Identification and Authentication Failures</a>
-        <p>Weak authentication mechanisms that attackers can exploit to impersonate users.</p>
-      </li>
-      <li>
-        <a href="/xss.html">8. Cross-Site Scripting (XSS)</a>
-        <p>Enables attackers to inject malicious scripts into web pages viewed by other users.</p>
-      </li>
-      <li>
-        <a href="/insufficient_logging_and_monitoring.html">9. Insufficient Logging and Monitoring</a>
-        <p>Lack of proper monitoring and logging allows attacks to go unnoticed.</p>
-      </li>
-      <li>
-        <a href="/ssrf.html">10. Server-Side Request Forgery (SSRF)</a>
-        <p>Enables attackers to send unauthorized requests on behalf of the server.</p>
-      </li>
+        <li><a href="broken_access_control.html">A01: Broken Access Control</a></li>
+        <li><a href="cryptographic_failures.html">A02: Cryptographic Failures</a></li>
+        <li><a href="injection.html">A03: Injection</a></li>
+        <li><a href="insecure_design.html">A04: Insecure Design</a></li>
+        <li><a href="security_misconfiguration.html">A05: Security Misconfiguration</a></li>
+        <li><a href="vulnerable_components.html">A06: Vulnerable and Outdated Components</a></li>
+        <li><a href="authentication_failures.html">A07: Identification and Authentication Failures</a></li>
+        <li><a href="software_data_integrity_failures.html">A08: Software and Data Integrity Failures</a></li>
+        <li><a href="logging_monitoring_failures.html">A09: Security Logging and Monitoring Failures</a></li>
+        <li><a href="ssrf.html">A10: Server-Side Request Forgery (SSRF)</a></li>
     </ul>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 OWASP Learning Tool</p>
-  </footer>
 </body>
 </html>

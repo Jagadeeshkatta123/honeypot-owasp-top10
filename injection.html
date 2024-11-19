@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Injection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injection - OWASP Top 10</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>Injection</h1>
-  <p>Injection flaws, such as SQL injection, occur when untrusted data is sent to an interpreter as part of a command or query. This allows attackers to execute arbitrary commands.</p>
-  <p>Example: SQL Injection where user input is used to manipulate a query.</p>
-  <a href="/index.html">Back to OWASP Top 10</a>
+    <h1>Injection</h1>
+    <form id="injectionForm">
+        <label for="userInput">Enter SQL-like query:</label>
+        <input type="text" id="userInput" placeholder="SELECT * FROM users WHERE name='admin'" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="injectionResult"></div>
+
+    <script>
+        document.getElementById('injectionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.getElementById('userInput').value;
+            const result = document.getElementById('injectionResult');
+            if (input.includes("DROP") || input.includes("SELECT *")) {
+                result.innerHTML = '<p style="color: red;">SQL Injection detected: Potential attack.</p>';
+            } else {
+                result.innerHTML = '<p style="color: green;">Query safe and processed.</p>';
+            }
+        });
+    </script>
 </body>
 </html>

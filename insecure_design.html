@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insecure Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insecure Design - OWASP Top 10</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>Insecure Design</h1>
-  <p>Insecure Design refers to flaws in the design phase of a web application, making it easier for attackers to exploit vulnerabilities. This could include improper authentication, weak encryption, etc.</p>
-  <p>Example: An application that doesn't implement role-based access controls (RBAC) properly, allowing unauthorized users access to sensitive data.</p>
-  <a href="/index.html">Back to OWASP Top 10</a>
+    <h1>Insecure Design</h1>
+    <form id="designForm">
+        <label for="designInput">Enter design choice (e.g., insecure login without MFA):</label>
+        <input type="text" id="designInput" placeholder="Insecure login" required><br><br>
+        <button type="submit">Evaluate Design</button>
+    </form>
+    <div id="designResult"></div>
+
+    <script>
+        document.getElementById('designForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.getElementById('designInput').value;
+            const result = document.getElementById('designResult');
+            if (input.toLowerCase().includes("insecure")) {
+                result.innerHTML = '<p style="color: red;">Insecure design detected: Requires secure design principles.</p>';
+            } else {
+                result.innerHTML = '<p style="color: green;">Design secure and safe.</p>';
+            }
+        });
+    </script>
 </body>
 </html>
