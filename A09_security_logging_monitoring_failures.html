@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Logging and Monitoring Failures</title>
+</head>
+<body>
+    <h1>A09:2021 - Security Logging and Monitoring Failures</h1>
+    <p>Example: Log an event without secure monitoring.</p>
+
+    <button type="button" onclick="logEvent()">Simulate Event</button>
+
+    <p id="output"></p>
+
+    <script>
+        function logEvent() {
+            console.log("Unmonitored event: Unauthorized access attempt.");
+            document.getElementById("output").innerText = "Event logged (but no secure monitoring in place).";
+        }
+    </script>
+</body>
+</html>

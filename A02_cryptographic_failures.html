@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptographic Failures</title>
+</head>
+<body>
+    <h1>A02:2021 - Cryptographic Failures</h1>
+    <p>Input sensitive data to see an example of insecure encryption.</p>
+
+    <form>
+        <label for="data">Enter sensitive data:</label>
+        <input type="text" id="data">
+        <button type="button" onclick="encrypt()">Encrypt</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function encrypt() {
+            const data = document.getElementById("data").value;
+            const insecureEncryption = btoa(data); // Base64 as insecure encryption
+            document.getElementById("output").innerText = `Insecurely Encrypted Data: ${insecureEncryption}`;
+        }
+    </script>
+</body>
+</html>

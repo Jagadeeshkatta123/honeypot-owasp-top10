@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Broken Access Control</title>
+</head>
+<body>
+    <h1>A01:2021 - Broken Access Control</h1>
+    <p>This vulnerability occurs when restrictions on authenticated users are not properly enforced.</p>
+
+    <form id="access-control-form">
+        <label for="role">Enter your role (e.g., user, admin):</label>
+        <input type="text" id="role" name="role">
+        <button type="button" onclick="checkAccess()">Check Access</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function checkAccess() {
+            const role = document.getElementById("role").value;
+            if (role === "admin") {
+                document.getElementById("output").innerText = "Access granted to admin area.";
+            } else {
+                document.getElementById("output").innerText = "Access denied. You are not an admin.";
+            }
+        }
+    </script>
+</body>
+</html>

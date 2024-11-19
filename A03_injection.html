@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Injection</title>
+</head>
+<body>
+    <h1>A03:2021 - Injection</h1>
+    <p>Simulate an SQL injection attack.</p>
+
+    <form>
+        <label for="username">Enter username:</label>
+        <input type="text" id="username">
+        <button type="button" onclick="simulateSQL()">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function simulateSQL() {
+            const username = document.getElementById("username").value;
+            const query = `SELECT * FROM users WHERE username = '${username}'`;
+            document.getElementById("output").innerText = `Constructed Query: ${query}`;
+        }
+    </script>
+</body>
+</html>

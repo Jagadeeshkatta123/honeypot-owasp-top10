@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Misconfiguration</title>
+</head>
+<body>
+    <h1>A05:2021 - Security Misconfiguration</h1>
+    <p>Show an example of exposed sensitive configuration.</p>
+
+    <p id="output">API Key: <span id="apikey">12345</span> (Example of exposed configuration)</p>
+
+    <button type="button" onclick="hideKey()">Hide API Key</button>
+
+    <script>
+        function hideKey() {
+            document.getElementById("apikey").innerText = "********";
+        }
+    </script>
+</body>
+</html>

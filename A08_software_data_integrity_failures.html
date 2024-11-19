@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software and Data Integrity Failures</title>
+</head>
+<body>
+    <h1>A08:2021 - Software and Data Integrity Failures</h1>
+    <p>Demonstrate unverified software integrity.</p>
+
+    <button type="button" onclick="loadScript()">Load External Script</button>
+
+    <script>
+        function loadScript() {
+            const script = document.createElement("script");
+            script.src = "http://unverified-source.com/malicious.js";
+            document.body.appendChild(script);
+            alert("Loaded script from an unverified source!");
+        }
+    </script>
+</body>
+</html>

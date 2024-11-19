@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insecure Design</title>
+</head>
+<body>
+    <h1>A04:2021 - Insecure Design</h1>
+    <p>Simulate poor password policy.</p>
+
+    <form>
+        <label for="password">Enter a password:</label>
+        <input type="password" id="password">
+        <button type="button" onclick="checkPassword()">Check Password</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password.length < 5) {
+                document.getElementById("output").innerText = "Weak password! Design a stronger policy.";
+            } else {
+                document.getElementById("output").innerText = "Password accepted.";
+            }
+        }
+    </script>
+</body>
+</html>

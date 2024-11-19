@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server-Side Request Forgery</title>
+</head>
+<body>
+    <h1>A10:2021 - Server-Side Request Forgery</h1>
+    <p>Simulate fetching data from an external URL.</p>
+
+    <form>
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url">
+        <button type="button" onclick="fetchData()">Fetch Data</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function fetchData() {
+            const url = document.getElementById("url").value;
+            document.getElementById("output").innerText = `Fetching data from ${url}...`;
+        }
+    </script>
+</body>
+</html>
