@@ -1,6 +1,3 @@
 [build]
   publish = "public"
-  command = "cp -r * public"
-
-[context.production.environment]
-  NODE_VERSION = "16"
+  command = "mkdir -p public && cp -r * public"
