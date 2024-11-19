@@ -1,18 +1,6 @@
 [build]
-  # The directory to build and deploy your site (should be your root folder)
   publish = "public"
-  # The command to build your site. In this case, there is no actual build step since it's just HTML.
-  # This will let Netlify know we don't need any building and it's static.
   command = "cp -r * public"
 
 [context.production.environment]
-  # Set the Node.js version, if needed.
   NODE_VERSION = "16"
-
-[[plugins]]
-  package = "@netlify/plugin-sass"
-  # This is if you're using any SCSS/SASS, remove if not using SCSS or CSS.
-
-[[plugins]]
-  package = "@netlify/plugin-cache-nextjs"
-  # This is useful in case you have a Next.js app, but not needed in your case. You can remove if unnecessary.
