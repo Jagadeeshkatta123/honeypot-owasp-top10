@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insecure File Upload</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Insecure File Upload</h1>
+        <p>This form allows users to upload files without validating file types, which is a common vulnerability.</p>
+    </header>
+
+    <form action="/.netlify/functions/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload a file:</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <footer>
+        <p>Warning: This is a vulnerable honeypot. Do not use in production.</p>
+    </footer>
+</body>
+</html>

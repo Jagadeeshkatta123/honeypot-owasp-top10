@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Top 10 Honeypot</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>OWASP Top 10 Honeypot</h1>
+        <p>This site demonstrates various security vulnerabilities from the OWASP Top 10.</p>
+    </header>
+
+    <main>
+        <section class="vulnerability">
+            <h2><a href="admin.html">A01: Broken Access Control</a></h2>
+            <p>Access an admin panel without proper authentication.</p>
+        </section>
+
+        <section class="vulnerability">
+            <h2><a href="search.html">A03: Injection (Reflected XSS)</a></h2>
+            <p>Test reflected XSS vulnerability by manipulating search input.</p>
+        </section>
+
+        <section class="vulnerability">
+            <h2><a href="upload.html">A05: Insecure Design (File Upload)</a></h2>
+            <p>Try uploading an insecure file to test the file upload vulnerability.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Honeypot demonstration for educational purposes. Powered by Netlify.</p>
+    </footer>
+</body>
+</html>

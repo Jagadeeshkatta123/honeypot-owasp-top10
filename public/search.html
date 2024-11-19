@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflected XSS</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Reflected XSS Vulnerability</h1>
+        <p>Search and inject a malicious script via the search query parameter.</p>
+    </header>
+
+    <form action="" method="GET">
+        <input type="text" name="search" placeholder="Enter search term" />
+        <button type="submit">Search</button>
+    </form>
+
+    <section id="search-result"></section>
+
+    <footer>
+        <p>Warning: Reflected XSS vulnerability. Any user input is directly inserted into the page.</p>
+    </footer>
+</body>
+</html>

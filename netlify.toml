@@ -1,0 +1,20 @@
+# netlify.toml
+
+[build]
+  # The publish directory, where Netlify will find the static files to serve
+  publish = "public"
+
+  # The command that Netlify uses to build the site (if applicable)
+  # For a static site without a build process, this can be left empty
+  command = ""
+
+[[redirects]]
+  # Redirect all requests to the corresponding function
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+[functions]
+  # Directory where your serverless functions are stored
+  directory = "functions"
