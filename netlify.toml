@@ -1,12 +1,3 @@
 [build]
-  publish = "public"    # This is the folder to deploy (change if needed)
-  command = ""          # Leave blank if no build command is needed (for static sites)
-
-[build.environment]
-  NODE_VERSION = "16"   # If using Node.js or any server-side functions (optional)
-
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-  force = true
+  publish = "/"
+  command = ""
